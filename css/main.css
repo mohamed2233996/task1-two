@@ -1,0 +1,42 @@
+summary {
+    list-style-type: '';
+    transition: 1s;
+}
+
+summary::marker {
+    display: none
+}
+
+details {
+    transition: 0.6s;
+}
+
+details[open] summary~* {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        margin-left: -10px
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px
+    }
+}
+
+details[open]>summary i {
+    transform: rotate(45deg);
+    transition: 0.6s;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.line-h{
+    height: calc(100% - 80px);
+}
+
